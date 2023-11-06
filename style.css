@@ -1,0 +1,256 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #7b6e84 #cbd9fa;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #cbd9fa;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #7b6e84;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+header {
+  height: 80px;
+  color: white;
+  background-color: rgb(34, 13, 49, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-family: "Dancing Script";
+}
+
+.icon-header {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  height: 56px;
+  transition: all 125ms ease-in-out;
+}
+
+.icon-header:hover {
+  transform: scale(1.2);
+}
+
+.background-img {
+  background-color: rgb(77, 128, 239, 0.3);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 24px;
+}
+
+.img-box {
+  height: 200px;
+  margin: 10px;
+  border-radius: 8px;
+  transition: all 125ms ease-in-out;
+}
+
+.img-box:hover {
+  filter: drop-shadow(8px 8px 10px gray);
+  filter: opacity(0.8);
+  transform: scale(1.1);
+}
+
+.img-box img {
+  object-fit: cover;
+}
+
+.impressum {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  padding-bottom: 24px;
+  background-color: rgb(77, 128, 239, 0.3);
+  height: calc(100vh - 160px);
+  background-size: cover;
+}
+
+.link-impressum {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+  transition: all 125ms ease-in-out;
+}
+
+.link-impressum:hover {
+  color: rgb(34, 13, 49);
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+
+footer {
+  height: 56px;
+  color: white;
+  background-color: rgb(34, 13, 49, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Dancing Script", cursive;
+  margin-top: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.link-footer {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  transition: all 125ms ease-in-out;
+}
+
+.link-footer:hover {
+  transform: scale(1.2);
+  color: white;
+  text-decoration: underline;
+}
+
+.show-foto {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+  height: 100vh;
+  background-color: black;
+}
+
+.show-foto-img {
+  z-index: 999;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.d-none {
+  display: none;
+}
+
+.icon-close {
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: all 125ms ease-in-out;
+}
+
+.icon-close:hover {
+  transform: scale(1.2);
+}
+
+.icon-arrow-left {
+  height: 40px;
+  position: absolute;
+  left: 40px;
+  transition: all 125ms ease-in-out;
+}
+
+.icon-arrow-left:hover {
+  transform: scale(1.2);
+}
+
+.icon-arrow-right {
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  transition: all 125ms ease-in-out;
+}
+
+.icon-arrow-right:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 1300px) {
+  .show-foto-img {
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  .icon-arrow-left {
+    left: 24px;
+  }
+
+  .icon-arrow-right {
+    right: 24px;
+  }
+}
+
+.icon-arrow-right:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 800px) {
+  .show-foto-img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .icon-arrow-left {
+    left: 12px;
+  }
+
+  .icon-arrow-right {
+    right: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 56px;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 12px;
+    font-size: 16px;
+  }
+
+  .icon-header {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    height: 40px;
+  }
+
+  .show-foto-img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  .img-box {
+    max-width: 280px;
+  }
+}
